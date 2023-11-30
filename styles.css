@@ -1,25 +1,35 @@
-// Récupérer tous les liens de la barre de navigation
-const navLinks = document.querySelectorAll('nav ul li a');
+/* Styles pour la barre de navigation */
+nav {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
 
-// Récupérer tous les contenus des onglets
-const contents = document.querySelectorAll('.content');
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-// Ajouter un gestionnaire d'événement pour chaque lien de la barre de navigation
-navLinks.forEach(link => {
-  link.addEventListener('click', (e) => {
-    e.preventDefault();
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
 
-    // Masquer tous les contenus
-    contents.forEach(content => {
-      content.classList.remove('active');
-    });
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
 
-    // Récupérer l'ID de l'onglet correspondant au lien cliqué
-    const tabId = link.getAttribute('href').substring(1);
+/* Styles pour le contenu des onglets */
+.content {
+  display: none;
+  padding: 20px;
+}
 
-    // Afficher le contenu de l'onglet correspondant
-    const tabContent = document.getElementById(tabId);
-    tabContent.classList.add('active');
-  });
-});
+.content.active {
+  display: block;
+}
+
 
