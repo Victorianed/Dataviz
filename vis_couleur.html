@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>s03e01 - nappe google</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .pix {
+            width: 100px;
+            height: 1.5px;
+            transition: height 0.2s;
+        }
+        .pix:hover{
+            width: 100px;
+            height: 50px;    
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+
+        $('document').ready(function(){
+            //$('#page').text("Hello ACN");
+
+
+            $.getJSON("datavis_couleur.json", function(data){
+                $.each(data, function(i,d){
+
+                    //$('#page').append('<p>' +    + '</p>');
+
+                    $('#page').append('<div class="pix" style="background-color:rgb('+d.rgb+');"></div>');
+
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="page"></div>
+</body>
+</html>
