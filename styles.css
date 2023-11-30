@@ -1,33 +1,25 @@
-/ Styles pour la barre de navigation /
-nav {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px;
-}
+// Récupérer tous les liens de la barre de navigation
+const navLinks = document.querySelectorAll('nav ul li a');
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
+// Récupérer tous les contenus des onglets
+const contents = document.querySelectorAll('.content');
 
-nav ul li {
-  display: inline;
-  margin-right: 20px;
-}
+// Ajouter un gestionnaire d'événement pour chaque lien de la barre de navigation
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
+    // Masquer tous les contenus
+    contents.forEach(content => {
+      content.classList.remove('active');
+    });
 
-/ Styles pour le contenu des onglets /
-.content {
-  display: none;
-  padding: 20px;
-}
+    // Récupérer l'ID de l'onglet correspondant au lien cliqué
+    const tabId = link.getAttribute('href').substring(1);
 
-.content.active {
-  display: block;
-}
+    // Afficher le contenu de l'onglet correspondant
+    const tabContent = document.getElementById(tabId);
+    tabContent.classList.add('active');
+  });
+});
+
