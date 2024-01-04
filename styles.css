@@ -17,7 +17,10 @@ nav {
   color: white;
   text-align: center;
   padding: 10px;
-  margin-top: 50px; /* Ajouté pour décaler la barre de navigation en dessous de la bannière */
+  position: fixed;
+  width: 100%;
+  top: 50px; /* Positionner juste en dessous de la bannière */
+  z-index: 999;
 }
 
 nav ul {
@@ -40,6 +43,7 @@ nav ul li a {
 .content {
   display: none;
   padding: 20px;
+  margin-top: 100px; /* Ajustement pour compenser la hauteur de la bannière et de la barre de navigation */
 }
 
 .content.active {
@@ -47,5 +51,5 @@ nav ul li a {
 }
 
 body {
-  padding-top: 60px; /* Ajustement pour ne pas masquer le contenu sous la bannière */
+  margin: 0; /* Assurez-vous qu'il n'y a pas de marge par défaut */
 }
