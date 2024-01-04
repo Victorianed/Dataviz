@@ -7,38 +7,38 @@
 </head>
 <body>
 
+<!-- Bannière fixe en haut de la page -->
+<div class="banner" onclick="document.getElementById('accueil').scrollIntoView();">
+  Single source publishing dans les musées
+</div>
+
 <!-- Barre de navigation pour les onglets -->
 <nav>
   <ul>
-    <li><a href="#accueil">Accueil</a></li>
     <li><a href="#visualisation-categoriel">Visualisation Catégorielle</a></li>
     <li><a href="#visualisation-spatiale">Visualisation Spatiale</a></li>
-    <li><a href="vis_couleur.html" target="_blank">Visualisation avec Image</a></li>
+    <li><a href="#visualisation-image">Visualisation avec Image</a></li>
   </ul>
 </nav>
 
 <!-- Contenu de la page -->
-<div class="content" id="accueil">
-  <!-- Page d'accueil -->
+<div class="content active" id="accueil">
   <h1>Bienvenue sur la page d'accueil des visualisations de Michelle de la Rosa et Victoriane Djaroudi.</h1>
-  <p>Dans le contexte de notre projet commun de master, nous avons choisi de travailler sur le single source publishing appliqué aux musées.</p>
-  <p>Dans cette démarche, nous avons effectué une veille sur les musées en France, surtout à Paris.</p>
-  <p>La première visualisation portera sur les origines des touristes en France/à Paris, pour déterminer quelles langues seraient les plus intéressantes à traduire et ainsi aider le plus grand nombre de personnes.</p>
-  <p>Pour la deuxième visualisation, nous étudierons la localisation des musées en France.</p>
-  <p>Enfin, nous avons réalisé une visualisation des couleurs principales que l'on retrouve sur les pages d'accueil des sites web des musées.</p>
+  <!-- ... Autre contenu de la page d'accueil ... -->
 </div>
 
 <div class="content" id="visualisation-categoriel">
-   <!-- Contenu de la visualisation catégoriel -->
+  <!-- Contenu de la visualisation catégorielle -->
 </div>
 
 <div class="content" id="visualisation-spatiale">
-  <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~victoriane/1.embed"></iframe>
+  <iframe width="100%" height="800" frameborder="0" scrolling="no" src="https://chart-studio.plotly.com/~victoriane/1.embed"></iframe>
 </div>
 
 <div class="content" id="visualisation-image">
   <iframe src="vis_couleur.html" width="100%" height="600px" frameborder="0"></iframe>
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
