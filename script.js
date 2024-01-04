@@ -1,5 +1,7 @@
+// Récupérer tous les liens de la barre de navigation
 const navLinks = document.querySelectorAll('nav ul li a');
 
+// Récupérer tous les contenus des onglets
 const contents = document.querySelectorAll('.content');
 
 // Ajouter un gestionnaire d'événement pour chaque lien de la barre de navigation
@@ -12,6 +14,7 @@ navLinks.forEach(link => {
       content.classList.remove('active');
     });
 
+    // Récupérer l'ID de l'onglet correspondant au lien cliqué
     const tabId = link.getAttribute('href').substring(1);
 
     // Afficher le contenu de l'onglet correspondant
@@ -19,8 +22,3 @@ navLinks.forEach(link => {
     tabContent.classList.add('active');
   });
 });
-
-// Afficher le contenu initial
-window.onload = () => {
-  document.getElementById('accueil').classList.add('active');
-};
