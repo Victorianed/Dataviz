@@ -1,9 +1,23 @@
+/* Styles pour la bannière fixe */
+.banner {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  cursor: pointer;
+  z-index: 1000;
+}
+
 /* Styles pour la barre de navigation */
 nav {
   background-color: #333;
   color: white;
   text-align: center;
   padding: 10px;
+  margin-top: 50px; /* Ajouté pour décaler la barre de navigation en dessous de la bannière */
 }
 
 nav ul {
@@ -32,4 +46,6 @@ nav ul li a {
   display: block;
 }
 
-
+body {
+  padding-top: 60px; /* Ajustement pour ne pas masquer le contenu sous la bannière */
+}
