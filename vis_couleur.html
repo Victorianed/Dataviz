@@ -21,28 +21,10 @@
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script>
-
-        $('document').ready(function(){
-            //$('#page').text("Hello ACN");
-
-
-            $.getJSON("datavis_couleur.json", function(data){
-                $.each(data, function(i,d){
-
-                    //$('#page').append('<p>' +    + '</p>');
-
-                    $('#page').append('<div class="pix" style="background-color:rgb('+d.rgb+');"></div>');
-
-                });
-            });
-        });
-    </script>
 </head>
 <body>
     <div id="page"></div>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
             $.getJSON("datavis_couleur.json", function(data){
