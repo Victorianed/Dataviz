@@ -53,3 +53,10 @@ nav ul li a {
 body {
   margin: 0; /* Assurez-vous qu'il n'y a pas de marge par défaut */
 }
+.color-display {
+  width: 200px; /* Ajustez la taille selon vos besoins */
+  height: 200px;
+  border: 2px solid black;
+  margin-top: 10px;
+}
+
