@@ -24,15 +24,21 @@
 </head>
 <body>
     <div id="page"></div>
+    <div id="selectedColorDisplay" class="color-display"></div>
 
     <script>
         $(document).ready(function(){
             $.getJSON("datavis_couleur.json", function(data){
                 $.each(data, function(i, d){
-                    $('#page').append('<div class="pix" style="background-color:rgb('+d.rgb+');"></div>');
+                    $('#page').append('<div class="pix" style="background-color:rgb('+d.rgb+');" onclick="showColor(this)"></div>');
                 });
             });
         });
+
+        function showColor(element) {
+            var selectedColor = element.style.backgroundColor;
+            document.getElementById('selectedColorDisplay').style.backgroundColor = selectedColor;
+        }
     </script>
 </body>
 </html>
